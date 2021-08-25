@@ -9,10 +9,10 @@ router.get('/top/answers');
 router.post('/add/answers',
     [// middleware de express validator
         check('id', 'El nombre es obligatoria').not().isEmpty(),
-        check('userId', 'Este campo es obligatoria').not().isEmpty(),
+        check('uid', 'Este campo es obligatoria').not().isEmpty(),
         check('name', 'El nombre es obligatoria').not().isEmpty(),
         check('qualification', 'la ').isLength({max: 2}),
-        check('answers', 'Este campo es obligatoria').not().isEmpty(),
+        check('answer', 'Este campo es obligatoria').not().isEmpty(),
     ],
  );
 
